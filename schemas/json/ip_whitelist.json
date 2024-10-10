@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "mad-hakker/schemas/json/ip_whitelist.json",
+    "title": "IP Whitelist",
+    "description": "Format for the IP whitelist used by filters",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "title": "Whitelist item",
+        "properties": {
+            "net": {
+                "type": "array",
+                "title": "Array of CIDR notation",
+                "description": "Network whitelisted",
+                "items": {
+                    "$ref": "#/definitions/cidr"
+                }
+            },
+            "comment": {
+                "type": "string",
+                "title": "Reason for the whitelist",
+                "description": "Comment describing why the addresses are whitelisted"
+            }
+        },
+        "required": [
+            "net",
+            "comment"
+        ]
+    },
+
+    "definitions": {
+        "cidr": {
+            "type": "string",
+            "pattern": "((^|\\.)((25[0-5])|(2[0-4]\\d)|(1\\d\\d)|([1-9]?\\d))){4}\\/(?:\\d|[12]\\d|3[01])$"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+**/.venv/
+**/properties.json
+**/__pycache__
+**/test_data
+.vscode/

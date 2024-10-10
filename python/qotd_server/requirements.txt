@@ -1,0 +1,9 @@
+commonmark==0.9.1
+flake8==6.0.0
+mccabe==0.7.0
+prettytable==3.5.0
+pycodestyle==2.10.0
+pyflakes==3.0.0
+Pygments==2.13.0
+rich==12.6.0
+wcwidth==0.2.5

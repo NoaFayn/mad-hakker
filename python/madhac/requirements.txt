@@ -1,0 +1,5 @@
+prettytable
+rich
+jinja2
+tabulate
+typing_extensions
